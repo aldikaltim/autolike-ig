@@ -1,0 +1,28 @@
+<?php
+function autolike($link, $mail){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,"http://instalab.pro/free-trial.php");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,"instagram_username=".$link."&instagram_email=".$mail."&send=Submit);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_REFERER, 'http://sandromau.tk/');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+        $server_output = curl_exec ($ch);
+        curl_close ($ch);
+		echo "SUCCESS & Follow @a.romualdi";
+        flush();
+		
+    }
+	
+print "Auto Like IG SGB TEAM & Thx To Sandro Putra\n";
+print "https://fb.me/anggaid157\n\n\n";
+echo "Link Foto lu (ex : https://www.instagram.com/p/BfiDeo6BnxN/)\nInput : ";
+$link = trim(fgets(STDIN));
+echo "isikan email \nInput : ";
+$$mail = trim(fgets(STDIN));
+$execute = autolike($link, $jml);
+print $execute;
+?>
