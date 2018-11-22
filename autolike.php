@@ -22,7 +22,7 @@ print "https://fb.me/anggaid157\n\n\n";
 echo "Link Foto lu (ex : https://www.instagram.com/p/BfiDeo6BnxN/)\nInput : ";
 $link = trim(fgets(STDIN));
 echo "isikan email \nInput : ";
-$$mail = trim(fgets(STDIN));
-$execute = autolike($link, $jml);
+$mail = trim(fgets(STDIN));
+$execute = autolike($link, $mail);
 print $execute;
 ?>
